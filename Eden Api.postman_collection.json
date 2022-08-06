@@ -1,0 +1,196 @@
+{
+	"info": {
+		"_postman_id": "5d78e210-e73d-4a91-82a7-203927b23bcd",
+		"name": "Eden Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "regular api",
+			"item": [
+				{
+					"name": "Login regular",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"hazem@eden.com\",\n    \"password\": \"123456\",\n    \"fcm\":\"gfhjk\",\n    \"device-type\": \"ios\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/regular/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"regular",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Job",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNzA2ZDI2YzI4YjNkODAxNzdmOWJmYmU2YmQxNzlmMDQ2NGM4ZTM3MTMxNGRlNjlhMWEyMDRhMjAzMzJkZGU4ZTEyZDdiNzRmZjJkZWM4N2YiLCJpYXQiOjE2NTk4MDQ5ODYuMDczMTYsIm5iZiI6MTY1OTgwNDk4Ni4wNzMxNjcsImV4cCI6MTY3NTcwMjU4Ni4wMTI2OTUsInN1YiI6IjIiLCJzY29wZXMiOltdfQ.Q7Qkq8F3vdqiYNHehx83bbIslpq7abvQN4eUQqVG7-fjBjXiGyUBN3ZPyP7KI2Y2IUxF40v9BhvPyx-scbcK4Ndd58FkRkoK8TWD0nshwuBXxhA1dRmOI2GYATuvOYpT6YRkcXYcTFNK7KgmG-GasdTiXgYE6V7l_yggxsEdmzInQtv3lvIDXry6atty67wYf7gUy3SpELZrxExW_1BCGClleWs93RXukcEIAVb3XyjBXhPhpp_pNs5HZcZoLT85jftdK1aARHfIPQxijnIy4ec1Raodc4sKANuUKek-uqQT2IQYmKd_VJZLRSz4juUjCpRU7EYr_3CC-RACL4CpDNwbX8VHqWfIt0o5PeVEuWW-1mBWvwpKQTLeooNMY4n34PeCBt4TOUNDKNM1EeWI0KyBJlZMgWuh4lkljGGtaUDU-YXouadq8-hyE54oEHUx-yM5IDv9gtU1b4ghrqFTfGuj3ZWwdC0uugSLMwbMFbccN8qpmzpsF3BklqSx5LqASw6-XwyrdQhOASsg0CxOEgaymoC3wgP13RSbWKn8I4_AAaF3bCJYeQtWJsiRdl0QF5lgWVP_DYdRRAz271Jc8q9KyKKdAX_mMw7_GjdOOLgoH-VHKTTUryPJY0Y8S8YfkXo9vSDTPgD9szU4fPeHTIbYlFkWdHBBji7pCUprXrY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"test\",\n    \"description\": \"hello world\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/regular/jobs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"regular",
+								"jobs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update Job",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNzA2ZDI2YzI4YjNkODAxNzdmOWJmYmU2YmQxNzlmMDQ2NGM4ZTM3MTMxNGRlNjlhMWEyMDRhMjAzMzJkZGU4ZTEyZDdiNzRmZjJkZWM4N2YiLCJpYXQiOjE2NTk4MDQ5ODYuMDczMTYsIm5iZiI6MTY1OTgwNDk4Ni4wNzMxNjcsImV4cCI6MTY3NTcwMjU4Ni4wMTI2OTUsInN1YiI6IjIiLCJzY29wZXMiOltdfQ.Q7Qkq8F3vdqiYNHehx83bbIslpq7abvQN4eUQqVG7-fjBjXiGyUBN3ZPyP7KI2Y2IUxF40v9BhvPyx-scbcK4Ndd58FkRkoK8TWD0nshwuBXxhA1dRmOI2GYATuvOYpT6YRkcXYcTFNK7KgmG-GasdTiXgYE6V7l_yggxsEdmzInQtv3lvIDXry6atty67wYf7gUy3SpELZrxExW_1BCGClleWs93RXukcEIAVb3XyjBXhPhpp_pNs5HZcZoLT85jftdK1aARHfIPQxijnIy4ec1Raodc4sKANuUKek-uqQT2IQYmKd_VJZLRSz4juUjCpRU7EYr_3CC-RACL4CpDNwbX8VHqWfIt0o5PeVEuWW-1mBWvwpKQTLeooNMY4n34PeCBt4TOUNDKNM1EeWI0KyBJlZMgWuh4lkljGGtaUDU-YXouadq8-hyE54oEHUx-yM5IDv9gtU1b4ghrqFTfGuj3ZWwdC0uugSLMwbMFbccN8qpmzpsF3BklqSx5LqASw6-XwyrdQhOASsg0CxOEgaymoC3wgP13RSbWKn8I4_AAaF3bCJYeQtWJsiRdl0QF5lgWVP_DYdRRAz271Jc8q9KyKKdAX_mMw7_GjdOOLgoH-VHKTTUryPJY0Y8S8YfkXo9vSDTPgD9szU4fPeHTIbYlFkWdHBBji7pCUprXrY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"test Update\",\n    \"description\": \"hello world update\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/regular/jobs/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"regular",
+								"jobs",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "manager api",
+			"item": [
+				{
+					"name": "Login Manager",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"manager@eden.com\",\n    \"password\": \"123456\",\n    \"fcm\":\"gfhjk\",\n    \"device-type\": \"ios\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/manager/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"manager",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Jobs",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYzhkNjQ1YzA4MGQ3ZWEyYWQyYjViNzBjNWZjYWUwZDRjZmQxOWY1NTJkYjJjMTRkZTRiNjEyYTE2YzExMzc4MzNkZmM2NTQ0OTkxOTUwYWMiLCJpYXQiOjE2NTk4MDYyNjkuMDU3ODMsIm5iZiI6MTY1OTgwNjI2OS4wNTc4MzcsImV4cCI6MTY3NTcwMzg2OS4wMTU5NTIsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.ax3Nj4HaEnmeZkvVEfjlRr_d-6rn6xmgLnSn_d7-pE0W1FZuiKF0sKHcDbPiwrv0I8ZG5BBDdtLnkiFCMCqQkvvcBEskFeyJRdp3rfcu-YAywIJrw00SBXk4laySfoH067QKB0TrjXbnGPpxEmFIT-XEQAk6q1hzi3CGU9TMBivCRiW5h8eakZfXkXCrAkPwiXmV3I09CUCEe79MUm0lmcrSegEUjlrdu8UHuxjIrR7Z3o-iNL9kxSKxrnC_HaBlocDXSX_reMHkZCeiVKwwZb3N0-kPgjFYEkXQlCa-2KP-QL_Sn6iwtbVm-HbXA8PaNGPkFGh2vWz7S4m5RrRTfhAa7BjgHpbvyIn8qbP0rrRjEvZdaD8R18t-OkD50ddLSze06PfqO1ijn6HIQnFH79hZkHY5j8WCO5LxnglQ2bgOS2WuNDFESezJXS1myW4x2SOwcLIfLXvoT4hwOJ5BUh7jKVBFdbWe-_cFNhblDYgUT6tHFg1faaktJkukxtb8JM7aGkx_Aa78PgGlEoL6Nw2J4s6YVwNSBsTc2R52cuxxWULeICQrF2a16C7BGUuzBl9JmTO9rZW4MByP45xHEo50UPc7txcY4BscOuQbwKiw_zZ8crkp_TyIQ6FUNM4hhkqfigfwNXPe6LMGIxDEvRpTXHOua7zUab465V55scE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/manager/jobs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"manager",
+								"jobs"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
